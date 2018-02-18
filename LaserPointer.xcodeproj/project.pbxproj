@@ -15,6 +15,7 @@
 		6189EF6E202F605B0095A56D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6189EF6C202F605B0095A56D /* LaunchScreen.storyboard */; };
 		6189EF79202F605B0095A56D /* LaserPointerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6189EF78202F605B0095A56D /* LaserPointerTests.swift */; };
 		6189EF84202F605B0095A56D /* LaserPointerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6189EF83202F605B0095A56D /* LaserPointerUITests.swift */; };
+		619AD19A2039725D00866844 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619AD1992039725D00866844 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6189EF7F202F605B0095A56D /* LaserPointerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaserPointerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6189EF83202F605B0095A56D /* LaserPointerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserPointerUITests.swift; sourceTree = "<group>"; };
 		6189EF85202F605B0095A56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		619AD1992039725D00866844 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619AD19A2039725D00866844 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				6189EF77202F605B0095A56D /* LaserPointerTests */,
 				6189EF82202F605B0095A56D /* LaserPointerUITests */,
 				6189EF5E202F605B0095A56D /* Products */,
+				619AD1982039725D00866844 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +130,14 @@
 				6189EF85202F605B0095A56D /* Info.plist */,
 			);
 			path = LaserPointerUITests;
+			sourceTree = "<group>";
+		};
+		619AD1982039725D00866844 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				619AD1992039725D00866844 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
