@@ -11,8 +11,6 @@ import CoreMotion
 import CoreBluetooth
 
 let TRANSFER_SERVICE_UUID = "B07172BF-BDD4-4B1A-9F45-D72B3AFF3207"
-let TRANSFER_SERVICE_CBUUID = CBUUID(string: TRANSFER_SERVICE_UUID)
-
 let TRANSFER_CHARACTERISTIC_UUID = "4C0FA8BE-45C9-4D8A-B529-CCCF5E7A50B8"
 
 let motionManager = CMMotionManager()
@@ -20,6 +18,10 @@ let NOTIFY_MTU = 20
 
 func degrees(radians:Double) -> Double {
     return 180 / .pi * radians
+}
+
+func movement(pitch: Double, yaw: Double, roll: Double) -> Double {
+    return sin(pitch)
 }
 
 class ViewController: UIViewController, CBPeripheralManagerDelegate {
@@ -125,7 +127,8 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
                         self.pitchLabel.text = String(pitch)
                         self.yawLabel.text = String(yaw)
                         if (self.hasSubscribers) {
-                            let s = String(Int(roll)) + "," + String(Int(pitch)) + "," + String(Int(yaw))
+                            let s = String(format:"%.3f,%.3f,%.3f", (attitude?.roll)!,(attitude?.pitch)!,(attitude?.yaw)!)
+//                            let s = String(Int(roll)) + "," + String(Int(pitch)) + "," + String(Int(yaw))
                             self.sendData(s)
                         }
                     } else {
